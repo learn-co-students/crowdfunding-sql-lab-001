@@ -1,0 +1,4 @@
+--color
+--warnings
+--format d
+--require spec_helper
