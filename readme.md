@@ -3,7 +3,7 @@ tags: template, SQL
 language: ruby, SQL
 ---
 
-# Basic Procedural App Template
+# SQL Lab Template
 
 ## Structure
 
