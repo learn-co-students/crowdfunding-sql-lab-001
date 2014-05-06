@@ -30,7 +30,7 @@ This template is for SQL labs, like [Quiz SQL](https://github.com/flatiron-schoo
 
 ####You need to make the following changes
 
-1. in sql_runner.rb, change the sample.sql to whatever the name of your SQL file is going to be. If you want multiple SQL files, add new methods with the new filenames, like:
+1. in `sql_runner.rb`, change the `sample.sql` to whatever the name of your SQL file is going to be. If you want multiple SQL files, add new methods with the new filenames, like:
 ```ruby
 def execute_sample_sql
   sql = File.read('lib/sample.sql')
