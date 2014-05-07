@@ -1,6 +1,7 @@
 ---
 tags: template, SQL
 language: ruby, SQL
+resources: 0
 ---
 
 # SQL Lab Template
@@ -40,3 +41,4 @@ end
 1. update `run.rb` to run any sql runner methods you created in `sql_runner.rb`. Just run the methods like this: `sql_runner.execute_sample_sql`. 
 1. Optionally in `run.rb` you can edit the name of your database file here: `db = SQLite3::Database.new('../db/lab_database.db')`
 
+## Resources
