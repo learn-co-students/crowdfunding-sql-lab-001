@@ -5,8 +5,13 @@ class SQLRunner
     @db = db
   end
 
-  def execute_sample_sql
-    sql = File.read('lib/sample.sql')
+  def execute_create_sql
+    sql = File.read('lib/create.sql')
+    execute_sql(sql)
+  end
+
+  def execute_insert_sql
+    sql = File.read('lib/insert.sql')
     execute_sql(sql)
   end
 

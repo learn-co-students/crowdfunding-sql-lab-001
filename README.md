@@ -6,42 +6,10 @@
 
 # Croudfunding SQL Lab
 
-Work in progress.
-
-
-
-
----
-tags: template, SQL
-language: ruby, SQL
-resources: 0
----
-
-# SQL Lab Template
-
-## Structure
-
-```bash
-SQL-Lab-template/
-├── bin
-│   └── environment.rb
-│   └── run.rb
-│   └── sql_runner.rb
-├── lib
-│   └── sample.sql
-├── spec
-│   └── sample_spec.rb
-│   └── spec_helper.rb
-├── .rspec
-├── Gemfile
-├── Gemfile.lock
-└── readme.md
-```
-
-
 ####You need to make the following changes
 
 1. in `sql_runner.rb`, change the `sample.sql` to whatever the name of your SQL file is going to be. If you want multiple SQL files, add new methods with the new filenames, like:
+
 ```ruby
 def execute_sample_sql
   sql = File.read('lib/sample.sql')
@@ -56,11 +24,11 @@ end
 
 ## Objectives
 
-Create the database, model the data, and use `JOIN`s to answer the questions.
+Create the tables, insert data, and use `JOIN`s to answer the questions.
 
-## Create the database
+## Create the Tables
 
-You are going to make a database to store data for your crowd-funding platform. The platform needs to have projects, users, and pledges. 
+In the `create.sql` file, model your tables. You should have a table for projects, users, and pledges.
 
 **Create a schema based on the following information:**
 
@@ -72,11 +40,11 @@ You are going to make a database to store data for your crowd-funding platform. 
 
 **Insert some records into the datbase**
 
-Create 10 projects, 20 users, and 30 pledges.
+Within the `insert.sql` file, create 10 projects, 20 users, and 30 pledges.
 
 ## Questions
 
-Answer the following questions with SQL. You'll use different kinds of SQL joins to arrive at the answers for most.
+Answer the following questions with SQL. You'll use different kinds of SQL joins to arrive at the answers for most. Put your SQL queries in `questions.sql`.
 
 - Select the titles of all projects and their pledge amounts.
 
