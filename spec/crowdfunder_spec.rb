@@ -90,11 +90,23 @@ describe "crowdfunder sql" do
       @sql_runner.execute_create_sql
       @sql_runner.execute_insert_sql 
     end
+
+    xit 'selects the titles of all projects and their pledge amounts' do
+    end
+
+    xit 'selects the user name, age, and pledge amount for all pledges' do
+    end
+
+    xit 'selects the titles of all projects that have met their funding goal' do 
+    end
+
+    xit 'selects user names and amounts of all pledges then orders them by the amount' do 
+    end
+
+    xit 'selects the category names, and pledge amounts of all pledges in the music category' do
+    end
+
+    xit 'selects the category names and the sum total of the pledge amounts of all the pledges in the book category' do   
+    end
   end
 end
-
-
-
-
-
-
