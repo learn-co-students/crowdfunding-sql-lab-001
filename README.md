@@ -4,27 +4,11 @@
   resources: 0
 ---
 
-# Croudfunding SQL Lab
-
-####You need to make the following changes
-
-1. in `sql_runner.rb`, change the `sample.sql` to whatever the name of your SQL file is going to be. If you want multiple SQL files, add new methods with the new filenames, like:
-
-```ruby
-def execute_sample_sql
-  sql = File.read('lib/sample.sql')
-  execute_sql(sql)
-end
-```
-1. update `run.rb` to run any sql runner methods you created in `sql_runner.rb`. Just run the methods like this: `sql_runner.execute_sample_sql`. 
-1. Optionally in `run.rb` you can edit the name of your database file here: `db = SQLite3::Database.new('../db/lab_database.db')`
-
-
-# Crowdfunding SQL
+# Croudfunding SQL
 
 ## Objectives
 
-Create the tables, insert data, and use `JOIN`s to answer the questions.
+Learn to create tables, insert data, and use `JOIN`s to answer the questions.
 
 ## Create the Tables
 
@@ -40,11 +24,11 @@ In the `create.sql` file, model your tables. You should have a table for project
 
 **Insert some records into the datbase**
 
-Within the `insert.sql` file, create 10 projects, 20 users, and 30 pledges.
+Within the `insert.sql` file, insert 10 projects, 20 users, and 30 pledges into the database.
 
 ## Questions
 
-Answer the following questions with SQL. You'll use different kinds of SQL joins to arrive at the answers for most. Put your SQL queries in `questions.sql`.
+Answer the following questions with SQL. You'll use different kinds of SQL joins to arrive at the answers for most. Put your SQL queries in `spec/crowdfunder_spec.rb` file.
 
 - Select the titles of all projects and their pledge amounts.
 
