@@ -1,7 +1,7 @@
 ---
   tags: sql, database, WIP
   languages: ruby, sql
-  resources: 0
+  resources: 3
 ---
 
 # Croudfunding SQL
