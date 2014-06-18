@@ -28,7 +28,7 @@ Within the `insert.sql` file, insert 10 projects, 20 users, and 30 pledges into 
 
 ## Questions
 
-Answer the below questions with SQL. You'll use different kinds of SQL joins to arrive at the answers for most. Put your SQL queries in `spec/crowdfunder_spec.rb` file. For this Q & A section, the database will be seeded with externally so don't expect it to reflect the data you added above.
+Answer the below questions with SQL. You'll use different kinds of SQL joins to arrive at the answers for most. Put your SQL queries in the `spec/crowdfunder_spec.rb` file. For this Q & A section, the database will be seeded with external data so don't expect it to reflect the data you added above.
 
 - Select the titles of all projects and their pledge amounts.
 
