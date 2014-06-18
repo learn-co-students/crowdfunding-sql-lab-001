@@ -1,4 +1,6 @@
 require 'bundler/setup'
+require 'base64'
+require 'pry'
 
 Bundler.require
 
