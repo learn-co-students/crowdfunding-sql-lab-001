@@ -72,15 +72,14 @@ describe "crowdfunder sql" do
     end 
 
     it "has 20 users" do
-      expect{@db.execute("SELECT COUNT(*) FROM user;")}.to_not raise_exception
-    end
+      expect{@db.execute("SELECT COUNT(*) FROM user;")}.to eq(20)
 
     it "has 10 projects" do
-      expect{@db.execute("SELECT COUNT(*) FROM project;")}.to_not raise_exception
+      expect{@db.execute("SELECT COUNT(*) FROM project;")}.to eq(10)
     end
 
     it "has 30 pledges" do
-      expect{@db.execute("SELECT COUNT(*) FROM pledge;")}.to_not raise_exception
+      expect{@db.execute("SELECT COUNT(*) FROM pledge;")}.to eq(30)
     end
 
   end
