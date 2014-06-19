@@ -73,6 +73,7 @@ describe "crowdfunder sql" do
 
     it "has 20 users" do
       expect{@db.execute("SELECT COUNT(*) FROM user;")}.to eq(20)
+    end
 
     it "has 10 projects" do
       expect{@db.execute("SELECT COUNT(*) FROM project;")}.to eq(10)
