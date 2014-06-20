@@ -1,5 +1,5 @@
 ---
-  tags: sql, database, WIP
+  tags: sql, database
   languages: ruby, sql
   resources: 3
 ---
