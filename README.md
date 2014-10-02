@@ -1,7 +1,7 @@
 ---
-  tags: sql, database
+  tags: sql, database, WIP
   languages: ruby, sql
-  resources: 3
+  resources: 0
 ---
 
 # Croudfunding SQL
@@ -47,4 +47,3 @@ Answer the below questions with SQL. You'll use different kinds of SQL joins to 
 * [Seldom Blog](http://blog.seldomatt.com/) - [About SQL Joins: The 3 Ring Binder Model](http://blog.seldomatt.com/blog/2012/10/17/about-sql-joins-the-3-ring-binder-model/)
 * [Coding Horror](http://blog.codinghorror.com/) - [A Visual Explanation of SQL Joins](http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 * [Geeky is Awesome](http://geekyisawesome.blogspot.com/) - [SQL Joins Tutorial](http://geekyisawesome.blogspot.com/2011/03/sql-joins-tutorial.html)
-
