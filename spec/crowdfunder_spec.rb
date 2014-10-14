@@ -114,7 +114,7 @@ describe "crowdfunder sql" do
       expect(@db.execute("your code here")).to eq([["music", 40], ["music", 24], ["music", 34], ["music", 12], ["music", 40], ["music", 40], ["music", 20], ["music", 230]])
     end
 
-    it 'selects the category names and the sum total of the pledge amounts of all the pledges in the book category' do
+    it 'selects the category name and the sum total of the all its pledges for the book category' do
       expect(@db.execute("your code here")).to eq([["books", 140]])
     end
   end
