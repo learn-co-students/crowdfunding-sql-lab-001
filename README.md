@@ -4,7 +4,7 @@
   resources: 0
 ---
 
-# Croudfunding SQL
+# Crowdfunding SQL
 
 ## Objectives
 
