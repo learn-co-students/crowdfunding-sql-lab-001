@@ -1,5 +1,4 @@
 require_relative 'environment'
-
 class SQLRunner
   def initialize(db)
     @db = db
@@ -24,6 +23,33 @@ class SQLRunner
   end
 
   def execute_sql(sql)
-     sql.scan(/[^;]*;/m).each { |line| @db.execute(line) } unless sql.empty?
+    Statement.new(sql).each do |line|
+      @db.execute(line)
+    end
+  end
+end
+
+class Statement
+  attr_reader :raw_sql
+  def initialize(raw_sql)
+    @raw_sql = raw_sql
+  end
+
+  def each(&block)
+    lines.each(&block)
+  end
+
+  def lines
+    remove_comments(raw_sql).
+    scan(/[^;]*;/m)
+  end
+
+  private
+
+  def remove_comments(sql)
+    sql.
+    lines.
+    reject { |line| line.include?("--")}.
+    join
   end
 end
