@@ -16,7 +16,7 @@ In the `create.sql` file, model your tables. You should have a table for project
 
 **Create a schema based on the following information:**
 
-- A project has a title, a category, a funding goal, a start date, and an end date. Valid categories are: music, books, charity.
+- A project has a title, a category, a funding goal, a start date, and an end date.
 
 - A user has a name and an age
 
@@ -26,9 +26,10 @@ In the `create.sql` file, model your tables. You should have a table for project
 
 Within the `insert.sql` file, insert 10 projects, 20 users, and 30 pledges into the database.
 
-## Questions
+## Queries
 
-Answer the below questions with SQL. You'll use different kinds of SQL joins to arrive at the answers for most. Put your SQL queries in the `spec/crowdfunder_spec.rb` file. For this Q & A section, the database will be seeded with external data so don't expect it to reflect the data you added above.
+Write the following queries in SQL. You'll use different kinds of SQL joins to arrive at the answers for most. 
+Put your SQL queries in the `lib/sql_queries` file. In the file you can write your queries in the appropriately named method so that each method returns a string value of the query. For this Q & A section, the database will be seeded with external data so don't expect it to reflect the data you added above.
 
 - Select the titles of all projects and their pledge amounts.
 
@@ -36,7 +37,7 @@ Answer the below questions with SQL. You'll use different kinds of SQL joins to 
 
 - Select the titles of all projects that have met their funding goal.
 
-- Select user names and amounts of all pledges. Order them by the amount.
+- Select user names and amounts of all pledges gropued by name. Order them by the amount.
 
 - Select the category names, and pledge amounts of all pledges in the music category.
 
@@ -47,4 +48,3 @@ Answer the below questions with SQL. You'll use different kinds of SQL joins to 
 * [Seldom Blog](http://blog.seldomatt.com/) - [About SQL Joins: The 3 Ring Binder Model](http://blog.seldomatt.com/blog/2012/10/17/about-sql-joins-the-3-ring-binder-model/)
 * [Coding Horror](http://blog.codinghorror.com/) - [A Visual Explanation of SQL Joins](http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 * [Geeky is Awesome](http://geekyisawesome.blogspot.com/) - [SQL Joins Tutorial](http://geekyisawesome.blogspot.com/2011/03/sql-joins-tutorial.html)
-
