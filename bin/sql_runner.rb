@@ -1,4 +1,5 @@
 require_relative 'environment'
+
 class SQLRunner
   def initialize(db)
     @db = db
@@ -6,12 +7,12 @@ class SQLRunner
 
   def execute_create_sql
     sql = File.read('lib/create.sql')
-    execute_sql(sql)
+    @db.execute_batch(sql)
   end
 
   def execute_insert_sql
     sql = File.read('lib/insert.sql')
-    execute_sql(sql)
+    @db.execute_batch(sql)
   end
 
   def execute_encoded_data
@@ -19,37 +20,6 @@ class SQLRunner
     decoded_data = Base64.decode64(encoded_data)
     sql = File.open('lib/decoded_data.sql', 'w'){ |f| f.write (decoded_data) }
     sql = File.read('lib/decoded_data.sql')
-    execute_sql(sql)
-  end
-
-  def execute_sql(sql)
-    Statement.new(sql).each do |line|
-      @db.execute(line)
-    end
-  end
-end
-
-class Statement
-  attr_reader :raw_sql
-  def initialize(raw_sql)
-    @raw_sql = raw_sql
-  end
-
-  def each(&block)
-    lines.each(&block)
-  end
-
-  def lines
-    remove_comments(raw_sql).
-    scan(/[^;]*;/m)
-  end
-
-  private
-
-  def remove_comments(sql)
-    sql.
-    lines.
-    reject { |line| line.include?("--")}.
-    join
+    @db.execute_batch(sql)
   end
 end
