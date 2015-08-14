@@ -1,8 +1,4 @@
----
-  tags: sql, database
-  languages: ruby, sql
-  resources: 3
----
+
 
 # Crowdfunding SQL
 
