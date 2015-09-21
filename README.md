@@ -38,7 +38,7 @@ end
 
 - Select the titles of all projects that have met their funding goal.
 
-- Select user names and amounts of all pledges gropued by name. Order them by the amount.
+- Select user names and amounts of all pledges grouped by name. Order them by the amount.
 
 - Select the category names, and pledge amounts of all pledges in the music category.
 
