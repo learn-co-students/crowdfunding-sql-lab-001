@@ -8,7 +8,7 @@ describe "crowdfunder sql" do
 
   describe "create.sql" do
     before do
-      @sql_runner.execute_create_sql  
+      @sql_runner.execute_create_sql
     end
 
     it "creates a project table with an id as a primary key" do
@@ -63,13 +63,13 @@ describe "crowdfunder sql" do
       expect{@db.execute("SELECT project_id FROM pledges;")}.to_not raise_exception
     end
 
-  end 
+  end
 
   describe "insert.sql" do
     before do
       @sql_runner.execute_create_sql
-      @sql_runner.execute_insert_sql  
-    end 
+      @sql_runner.execute_insert_sql
+    end
 
     it "has 20 users" do
       expect(@db.execute("SELECT COUNT(*) FROM users;").flatten[0]).to eq(20)
@@ -88,14 +88,13 @@ describe "crowdfunder sql" do
   describe "questions" do
     before do
       @sql_runner.execute_create_sql
-      @sql_runner.execute_encoded_data 
+      @sql_runner.execute_data
     end
     after do
-      File.open('lib/decoded_data.sql', 'w'){ |f| f.truncate(0) }
+      File.read('lib/data.sql')
     end
 
     it '#selects_the_titles_of_all_projects_and_their_pledge_amounts' do
-
       expect(@db.execute(selects_the_titles_of_all_projects_and_their_pledge_amounts)).to eq([["Animal shelter needs dog food", 210], ["Help me buy a guitar", 98], ["Help save birds of paradise", 170], ["I have bed bugs!", 740], ["I want to teach English in China", 200], ["Iguana needs tail operation", 1035.5], ["My book on SQL", 20], ["The next Harry Potter", 120], ["The next Inna-Gadda-Davida", 342], ["Voldement needs a body", 489]])
     end
 
@@ -107,8 +106,8 @@ describe "crowdfunder sql" do
       expect(@db.execute(selects_the_titles_of_all_projects_that_have_met_their_funding_goal)).to eq([["My book on SQL", 0], ["The next Inna-Gadda-Davida", -142]])
     end
 
-    it '#selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount' do 
-      expect(@db.execute(selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount)).to eq([["Iguana", 10], ["Swizzle", 12], ["Sirius", 19], ["Alex", 20], ["Marisa", 24], ["Voldemort", 34], ["Amanda", 40], ["Bear", 50], ["Hermione", 50], ["Rosey", 50], ["Pacha", 60], ["Sophie", 60], ["Finnebar", 70], ["Franz", 90], ["Ena", 100], ["Whale", 125.5], ["Katie", 170], ["Squid", 270], ["Albus", 470], ["Victoria", 1700]])   
+    it '#selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount' do
+      expect(@db.execute(selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount)).to eq([["Iguana", 10], ["Swizzle", 12], ["Sirius", 19], ["Alex", 20], ["Marisa", 24], ["Voldemort", 34], ["Amanda", 40], ["Bear", 50], ["Hermione", 50], ["Rosey", 50], ["Pacha", 60], ["Sophie", 60], ["Finnebar", 70], ["Franz", 90], ["Ena", 100], ["Whale", 125.5], ["Katie", 170], ["Squid", 270], ["Albus", 470], ["Victoria", 1700]])
     end
 
     it '#selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category' do
